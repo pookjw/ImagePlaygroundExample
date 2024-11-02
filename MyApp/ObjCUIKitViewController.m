@@ -52,7 +52,6 @@
         
         id catPrompt = ((id (*)(id, SEL, id))objc_msgSend)([objc_lookUpClass("GPPromptElement") alloc], sel_registerName("initWithText:"), @"Cat");
         
-        // -[GPPromptElement initWithText:title:isPersonHandle:isSuggestableText:needsConceptsExtraction:needsSuggestableConceptsExtraction:]
         id extractedPrompt = ((id (*)(id, SEL, id, id, BOOL, BOOL, BOOL, BOOL))objc_msgSend)([objc_lookUpClass("GPPromptElement") alloc], sel_registerName("initWithText:title:isPersonHandle:isSuggestableText:needsConceptsExtraction:needsSuggestableConceptsExtraction:"), @"In a deep and mystical forest, a magical deer stands by a small lake shrouded in a soft, blue mist. The deer has shimmering silver fur and majestic golden antlers that emit a gentle light, illuminating the surroundings. Around the deer, small glowing butterflies gather, creating an enchanting scene. The night sky is filled with twinkling stars, and the moonlight bathes the forest, adding to the air of mystery and wonder.", @"Magical Deer in the Forest", NO, NO, YES, NO);
         
         id recipe = ((id (*)(id, SEL, id, id, id))objc_msgSend)([objc_lookUpClass("GPRecipe") alloc], sel_registerName("initWithEncodedRecipe:prompts:contextElements:"), nil, nil, @[catPrompt, extractedPrompt]);
