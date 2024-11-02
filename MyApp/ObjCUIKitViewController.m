@@ -66,6 +66,7 @@
     }];
     
     UIButton *button = [UIButton buttonWithConfiguration:configuration primaryAction:action];
+    button.enabled = ((BOOL (*)(Class, SEL))objc_msgSend)(objc_lookUpClass("GPImageEditionViewController"), sel_registerName("isAvailable"));
     
     self.view = button;
 }
