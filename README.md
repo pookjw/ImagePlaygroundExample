@@ -1,3 +1,1 @@
-# ImagePlaygroundExample
-
-![](0.png)
+[Moved](https://github.com/pookjw/MiscellaneousWWDC24/tree/main/ImagePlaygroundExample)
